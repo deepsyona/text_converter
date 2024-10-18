@@ -31,13 +31,13 @@ function App(){
       setMode('dark');
       document.body.style.backgroundColor ='#042743';
       showAlert("Dark mode has been enabled !!" , "Success:");
-      document.title = "Text_Converter | Dark Mode";
+      // document.title = "Text_Converter | Dark Mode";
     }
     else{
       setMode('light');
       document.body.style.backgroundColor ='white';
       showAlert("Light mode has been enabled !!" , "Success:");
-      document.title = "Text_Converter | Light Mode";
+      // document.title = "Text_Converter | Light Mode";
     }
   }
   const router = createBrowserRouter(
@@ -45,9 +45,9 @@ function App(){
       <>
         <Route path="/" element={<><Navbar title="TextConverter" aboutText="About" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
-        <TextForm showAlert={showAlert} heading="Enter the text here to analyze below" mode={mode} /></>} />
+        <TextForm showAlert={showAlert} heading="Try TextCounter - Word Counter & Character Counter" mode={mode} /></>} />
         <Route path="/about" element={<><Navbar title="TextConverter" aboutText="About" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} /><About /></>} />
+        <Alert alert={alert} /><About mode={mode}/></>} />
       </>
     )
   );
